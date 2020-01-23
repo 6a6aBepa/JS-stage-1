@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=task1()>Задание 1</button>
+    <button onclick=task2()>Задание 2</button>
+    <button onclick=task2()>Задание 3</button>
+    <button onclick=task4()>Задание 4</button>
+    <button onclick=task5()>Задание 5</button>
+    
+    <script>
+        function task1(){
+        var celsius = prompt("Введите количество градусов по цельсию");
+        var fehrenheit = (9/5)*celsius+32;
+        alert("градусов по фаренгейту:" + fehrenheit)
+        };
+        function task2() {
+            var name="Василий"
+            var admin=name
+            console.log(admin)
+        }
+        function task4() {
+            console.log(1000+"108")
+        }
+        function task5() {
+            
+            console.log("атрибут async - загрузка файла HTML происходит вместе со скриптом, загрузка HTML ставится на паузу на момент полной загрузки скрипта, т.к. выполняется скрипт, загрузка продолжается после исполнения")
+            console.log("атрибут defer - загрузка файла HTML происходит как с атрибутом async, исполнение скрипта происходит только после полной загрузки HTML файла")
+            console.log("без указания атрибутов загрузка и исполнение скриптов начнется сразу как только браузер наткнется на строчку <script>, HTML код встанет на паузу")
+        }
+    </script>
+</body>
+</html>
