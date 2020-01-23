@@ -1,28 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <button onclick=task1()>Задание 1</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
+    <button onclick=task2()>Задание 2</button>
+    <button onclick=task3()>Задание 3</button>
+    <button onclick=task4()>Задание 4</button>
+    <button onclick=task5(plus())>Задание 5</button>
     <script>
+
+
+        //Задание 1
+
         function task1() {
-        console.log(
-        "var a = 1, b = 1, c, d"+
-        "c = ++a; alert(c)           // 2"+
-        'd = b++; alert(d)           // 1'+
-        'c = (2+ ++a); alert(c)      // 5'+
-        'd = (2+ b++); alert(d)      // 4'+
-        'alert(a)                   // 3'+
-        'alert(b) ')
+
+
+            /*var a = 1, b = 1, c, d;
+            c = ++a; alert(c);           // 2 c=a a=a+1
+            d = b++; alert(d);           // 1 d=b b=b+1 (значение записывается после поаторного вывода)
+            c = (2+ ++a); alert(c);      // 5 с=2+(a=a+1)
+            d = (2+ b++); alert(d);      // 4 d=2+(b=b+1) (значение записывается после поаторного вывода)
+            alert(a);                    // 3 значение,которое получилось после всех иттераций
+            alert(b);                    // 3 значение,которое получилось после всех иттераций                       */
+            console.log("ответ в комментарие к коду")
+        }
+
+        //Задание 2
+        //Чему будет равен x в примере ниже?
+        function task2() {
+
+            var a = 2
+            var x = 1 + (a *= 2) //равнозначное выражение- x=1+(a=a*2), x=5
+
+            console.log("x = 1 + (a *= 2) равнозначное выражение- x=1+(a=a*2), x=5")
+        }
+
+        //Задание 3 
+        /*3. Объявить две целочисленные переменные a и b и задать им
+         произвольные начальные значения.Затем написать скрипт, который
+          работает по следующему принципу:*/
+
+        function task3() {
+            var a = +prompt("Введите А")
+            var b = +prompt("Введите B")
+            //если a и b положительные, вывести их разность;
+            if (a >= 0 && b >= 0) {
+                console.log("A-B=", a - b)
+                console.log("B-A=", b - a)
+            }
+            //если а и b отрицательные, вывести их произведение;
+            else if (a < 0 && b < 0) {
+                console.log("A*B или B*A=", a * b)
+            }
+            //если а и b разных знаков, вывести их сумму;
+            else {
+                console.log("A+B или B+A", a + b)
+            }
+        }
+
+        //Задание 4.
+        /*4. Присвоить переменной а значение в промежутке [0..15].
+         С помощью оператора switch организовать вывод чисел от a до 15.*/
+
+        function task4() {
+            var a = +prompt("Введите число от 0 до 15")
+            switch (a) {
+                case (a >= 0):
+                    console.log("Вы ввели: ", a)
+                    break
+                default:
+                    console.log("Введите число от 0 до 15")
+                    break
+
+            }
+        }
+        //Задание 5.
+        /*5. Реализовать основные 4 арифметические операции в виде функций
+         с двумя параметрами. Обязательно использовать оператор return.*/
+        function task5() {
+            var a = +prompt("Введите А")
+            var b = +prompt("Введите B")
+
+            function plus(a, b) {
+                return a + b
+            }
+            function minus(a, b) {
+                return a - b
+            }
+            function multiplication(a, b) {
+                return a * b
+            }
+            function division(a, b) {
+                return a / b
+            }
+
         }
     </script>
 </body>
+
 </html>
