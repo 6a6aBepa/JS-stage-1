@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=task1()>Задание 1 </button>
+    <button onclick=task2()>Задание 4</button>
+    <button onclick=task3()>Задание 4*</button>
+
+    <script>
+        //1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+
+        function task1() {
+            var a = 1
+
+            while (a < 100) {
+                if (a < 4) {      //возможно тут быдлорешение, но работает)
+                    console.log(a)
+                }
+                if (a >= 4 && a % 2 && a % 3 && a % 5) {
+                    console.log(a)
+                }
+
+                a++
+
+            }
+        }
+
+        /*4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело
+         цикла. Выглядеть это должно так: for(…)*/
+        function task2() {            //не доконца уверен в грамотности кода
+            var j = []
+            for (var i = -1; i < 9; j.push(++i)) {
+            }
+            console.log(j)
+        }
+
+        /*4) *Нарисовать пирамиду с помощью console.log,
+         как показано на рисунке, только у вашей пирамиды должно быть
+          20 рядов, а не 5:
+           */
+
+        function task3() {
+            for (var i = 0; i < 21; i++) {    //решение нашел на простор MDN
+                console.log("x".repeat(i))
+            }
+        }
+    </script>
+</body>
+
+</html>
