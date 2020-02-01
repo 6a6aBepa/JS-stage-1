@@ -49,6 +49,9 @@ function basket() {
 
 }
 
+
+//5 Задание ниже
+
 let myProject = document.querySelector("#container")
 
 function header() {
